@@ -1,10 +1,12 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM project
-"""Compare four complete manager/parser/view implementations; CPU helper only."""
+"""Compare five boundary implementations, including the unfixed CPU baseline."""
 
 import gc
+import hashlib
 import importlib.util
 import json
+import platform
 import statistics
 import subprocess
 import sys
@@ -35,6 +37,7 @@ PATHS = {
     "kimi": "vllm/reasoning/kimi_k3_reasoning_parser.py",
 }
 for arm, rev in (
+    ("unfixed", "c26c9bfeb7ee2c804fe55b425afd049809814582"),
     ("base", "cbc5b29ec71c645855551a133e0d22a96c2c35a4"),
     ("source", "d213a3bc738127032524a639bbb834644022af73"),
 ):
@@ -73,7 +76,7 @@ config = VllmConfig(
     ),
 )
 managers = {}
-for label in ("base", "before", "source", "after"):
+for label in ("unfixed", "base", "before", "source", "after"):
     if label == "after":
         managers[label] = StructuredOutputManager(config)
         continue
@@ -95,6 +98,8 @@ results = []
 for context in (128, 32768):
     for case, extra, draft, ended in (
         *[(f"think.k={k}", [], [word] * k, False) for k in (1, 7, 16, 32)],
+        ("close_last", [], [word] + close, False),
+        ("split_close_last", close[:-1], close[-1:], False),
         ("close_reopen", [], [word] + close + reopen, False),
         *[
             (
@@ -128,11 +133,17 @@ for context in (128, 32768):
                 else len(close) + 1
             )
         )
+        boundaries = {}
+        correct = {}
         for name, manager in managers.items():
-            assert (
-                manager._get_constraint_bounds(requests[name], draft).grammar_start
-                == expected
-            )
+            bounds = manager._get_constraint_bounds(requests[name], draft)
+            boundaries[name] = tuple(bounds)
+            correct[name] = tuple(bounds) == (expected, expected)
+            # The original code skips the constraint when the full draft reopens
+            # thinking. Measure it, but never treat the wrong answer as a win.
+            historical = len(draft) + 1 if "reopen" in case else expected
+            want = historical if name == "unfixed" else expected
+            assert tuple(bounds) == (want, want), (name, case, bounds, want)
             for _ in range(100):
                 manager._get_constraint_bounds(requests[name], draft)
         gc.collect()
@@ -155,6 +166,8 @@ for context in (128, 32768):
             "context": context,
             "draft_len": len(draft),
             "expected_boundary": expected,
+            "observed_bounds": boundaries,
+            "correct_boundary": correct,
             "timing": {
                 n: {
                     "median_us": statistics.median(v),
@@ -173,6 +186,33 @@ OUTPUT.write_text(
     json.dumps(
         {
             "results": results,
+            "versions": {
+                "unfixed": "c26c9bfeb7ee2c804fe55b425afd049809814582",
+                "base": "cbc5b29ec71c645855551a133e0d22a96c2c35a4",
+                "before": "base + pre-singleton-optimization.patch",
+                "source": "d213a3bc738127032524a639bbb834644022af73",
+                "after": subprocess.check_output(
+                    ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
+                ).strip(),
+            },
+            "source_sha256": {
+                arm: {
+                    name: hashlib.sha256(
+                        (
+                            ROOT / path
+                            if arm == "after"
+                            else SNAPSHOTS / f"{arm}_{name}.py"
+                        ).read_bytes()
+                    ).hexdigest()
+                    for name, path in PATHS.items()
+                }
+                for arm in managers
+            },
+            "environment": {
+                "python": sys.version,
+                "platform": platform.platform(),
+                "torch": torch.__version__,
+            },
             "method": (
                 "same process; intact production classes; 9 alternating rounds, "
                 "300 calls each, 100 warmups, GC disabled"
