@@ -1,0 +1,69 @@
+diff --git a/vllm/reasoning/kimi_k3_reasoning_parser.py b/vllm/reasoning/kimi_k3_reasoning_parser.py
+index 9211d27e70..8ea3f06fee 100644
+--- a/vllm/reasoning/kimi_k3_reasoning_parser.py
++++ b/vllm/reasoning/kimi_k3_reasoning_parser.py
+@@ -37,0 +38 @@ if TYPE_CHECKING:
++    from vllm.parser.engine.parser_engine import ReasoningEnd
+@@ -167,0 +169,24 @@ class KimiK3ReasoningParser(ReasoningParser):
++    def find_reasoning_end(self, token_ids: Sequence[int]) -> "ReasoningEnd | None":
++        from vllm.parser.engine.parser_engine import ReasoningEnd
++
++        if not self._thinking_enabled:
++            return ReasoningEnd(0, False)
++        close = self._think_close_ids
++        # A context-free scan is safe only when the streaming carry cannot
++        # contain a complete close, nor finish one at the start of this delta.
++        if not close or len(close) != len(self._think_open_ids):
++            return None
++        num_tokens = len(token_ids)
++        for offset in range(1, len(close)):
++            remaining = len(close) - offset
++            if (
++                remaining <= num_tokens
++                and token_ids[0] == close[offset]
++                and all(token_ids[i] == close[offset + i] for i in range(remaining))
++            ):
++                return None
++        for i in range(num_tokens - len(close) + 1):
++            if token_ids[i] == close[0] and _match_at(token_ids, i, close):
++                return ReasoningEnd(i + len(close) - 1, False)
++        return ReasoningEnd(num_tokens, False)
++
+diff --git a/vllm/v1/structured_output/__init__.py b/vllm/v1/structured_output/__init__.py
+index fc9a0ebdf1..1f38c6bbb2 100644
+--- a/vllm/v1/structured_output/__init__.py
++++ b/vllm/v1/structured_output/__init__.py
+@@ -326,8 +326,8 @@ class StructuredOutputManager:
+-        # Parsers that know their end tokens also report whether one is content.
+-        if reasoner.reasoning_end_token_ids:
+-            end = reasoner.find_reasoning_end(spec_tokens)
+-            if end is not None:
+-                constraint_start = end.offset + 1
+-                if end.implicit:
+-                    return ConstraintBounds(end.offset, constraint_start)
+-                return ConstraintBounds(constraint_start, constraint_start)
++        # Parsers may locate multi-token ends too. None requires the
++        # context-aware fallback (e.g. a marker split across decode steps).
++        end = reasoner.find_reasoning_end(spec_tokens)
++        if end is not None:
++            constraint_start = end.offset + 1
++            if end.implicit:
++                return ConstraintBounds(end.offset, constraint_start)
++            return ConstraintBounds(constraint_start, constraint_start)
+diff --git a/vllm/v1/token_buffer.py b/vllm/v1/token_buffer.py
+index c258c03bc7..7ea7a3dbe9 100644
+--- a/vllm/v1/token_buffer.py
++++ b/vllm/v1/token_buffer.py
+@@ -188,0 +189,12 @@ class TokenIdsView(Sequence[int]):
++        if self._list is None and isinstance(index, slice):
++            start, stop, step = index.indices(self._len)
++            split = len(self._tokens)
++            if step == 1:
++                result = list(self._tokens[start : min(stop, split)])
++                if stop > split:
++                    result.extend(self._suffix[max(0, start - split) : stop - split])
++                return result
++            return [
++                self._tokens[i] if i < split else self._suffix[i - split]
++                for i in range(start, stop, step)
++            ]

@@ -189,7 +189,17 @@ class TokenIdsView(Sequence[int]):
         if self._list is not None:
             return self._list[index]
         if isinstance(index, slice):
-            return [self[i] for i in range(*index.indices(self._len))]
+            start, stop, step = index.indices(self._len)
+            split = len(self._tokens)
+            if step == 1:
+                result = list(self._tokens[start : min(stop, split)])
+                if stop > split:
+                    result.extend(self._suffix[max(0, start - split) : stop - split])
+                return result
+            return [
+                self._tokens[i] if i < split else self._suffix[i - split]
+                for i in range(start, stop, step)
+            ]
         if index < 0:
             index += self._len
         if not 0 <= index < self._len:
