@@ -1,0 +1,1411 @@
+{
+  "identical_pre_mask_logits": true,
+  "observation_does_not_change_results": true,
+  "baseline": {
+    "sources": {
+      "vllm.v1.structured_output": {
+        "sha256": "e33ed1786e5e60a2ef01313f52a67ba4b368477520ae43d453e8e960ac395b48"
+      },
+      "vllm.v1.core.sched.scheduler": {
+        "sha256": "e2e59ccf902e3ab8ce2df3e6dc345a295d78bb06e37d408582ad95f8e5914ac7"
+      },
+      "vllm_ascend.worker.v2.spec_decode.rejection_sampler_utils": {
+        "sha256": "83cfdc9672f558820c3fcf18bdf68c1a89279b14b20de5104b636ed207458bfd"
+      },
+      "vllm_ascend.ops.triton.v2.spec_decode.resample": {
+        "sha256": "0685e0d55bb21105180b95747fde8ace8a3136af478e8bc4add6f9d626e4c8b3"
+      }
+    },
+    "results": [
+      {
+        "variant": "baseline",
+        "case": "recorded_reopen",
+        "seed": 1,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 8,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          8
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "invalid": 0,
+        "open_mask_row4": 1,
+        "masked_open_logit": "0.0",
+        "pre_mask_input_sha256": "aae6955fffc2d6eae2f4ca1a2c1693d1e6ce2ebeca0b65765f81bddde65c5b0a",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          12092
+        ],
+        "accepted_draft_count": 5,
+        "fsm_accepts": false
+      },
+      {
+        "variant": "baseline",
+        "case": "recorded_reopen",
+        "seed": 1234,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 8,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          8
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "invalid": 0,
+        "open_mask_row4": 1,
+        "masked_open_logit": "0.0",
+        "pre_mask_input_sha256": "aae6955fffc2d6eae2f4ca1a2c1693d1e6ce2ebeca0b65765f81bddde65c5b0a",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          12092
+        ],
+        "accepted_draft_count": 5,
+        "fsm_accepts": false
+      },
+      {
+        "variant": "baseline",
+        "case": "recorded_reopen",
+        "seed": 5340304686692337680,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 8,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          8
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "invalid": 0,
+        "open_mask_row4": 1,
+        "masked_open_logit": "0.0",
+        "pre_mask_input_sha256": "aae6955fffc2d6eae2f4ca1a2c1693d1e6ce2ebeca0b65765f81bddde65c5b0a",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          12092
+        ],
+        "accepted_draft_count": 5,
+        "fsm_accepts": false
+      },
+      {
+        "variant": "baseline",
+        "case": "reject_before_close",
+        "seed": 1,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 8,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          8
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "invalid": 0,
+        "open_mask_row4": 1,
+        "masked_open_logit": "0.0",
+        "pre_mask_input_sha256": "2ee9d4690afde15faa62bdda44699b5026d173f1c40f472033872257a40fa15d",
+        "committed": [
+          13,
+          13
+        ],
+        "accepted_draft_count": 1,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "baseline",
+        "case": "reject_before_close",
+        "seed": 1234,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 8,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          8
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "invalid": 0,
+        "open_mask_row4": 1,
+        "masked_open_logit": "0.0",
+        "pre_mask_input_sha256": "2ee9d4690afde15faa62bdda44699b5026d173f1c40f472033872257a40fa15d",
+        "committed": [
+          13,
+          13
+        ],
+        "accepted_draft_count": 1,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "baseline",
+        "case": "reject_before_close",
+        "seed": 5340304686692337680,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 8,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          8
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "invalid": 0,
+        "open_mask_row4": 1,
+        "masked_open_logit": "0.0",
+        "pre_mask_input_sha256": "2ee9d4690afde15faa62bdda44699b5026d173f1c40f472033872257a40fa15d",
+        "committed": [
+          13,
+          13
+        ],
+        "accepted_draft_count": 1,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "baseline",
+        "case": "normal_response_control",
+        "seed": 1,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          12092,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "0bbce9aa69fa8f0a865536227a6e0c55ffd85b3bc9283771c5fb1fc2b6f97d30",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "baseline",
+        "case": "normal_response_control",
+        "seed": 1234,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          12092,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "0bbce9aa69fa8f0a865536227a6e0c55ffd85b3bc9283771c5fb1fc2b6f97d30",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "baseline",
+        "case": "normal_response_control",
+        "seed": 5340304686692337680,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          12092,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "0bbce9aa69fa8f0a865536227a6e0c55ffd85b3bc9283771c5fb1fc2b6f97d30",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      }
+    ]
+  },
+  "fixed": {
+    "sources": {
+      "vllm.v1.structured_output": {
+        "sha256": "06a35991dea483ea25e94011a4696982dc3bd6d34de6f15aa224b7e62cf541eb"
+      },
+      "vllm.v1.core.sched.scheduler": {
+        "sha256": "e2e59ccf902e3ab8ce2df3e6dc345a295d78bb06e37d408582ad95f8e5914ac7"
+      },
+      "vllm_ascend.worker.v2.spec_decode.rejection_sampler_utils": {
+        "sha256": "83cfdc9672f558820c3fcf18bdf68c1a89279b14b20de5104b636ed207458bfd"
+      },
+      "vllm_ascend.ops.triton.v2.spec_decode.resample": {
+        "sha256": "0685e0d55bb21105180b95747fde8ace8a3136af478e8bc4add6f9d626e4c8b3"
+      }
+    },
+    "results": [
+      {
+        "variant": "fixed",
+        "case": "recorded_reopen",
+        "seed": 1,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "aae6955fffc2d6eae2f4ca1a2c1693d1e6ce2ebeca0b65765f81bddde65c5b0a",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed",
+        "case": "recorded_reopen",
+        "seed": 1234,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "aae6955fffc2d6eae2f4ca1a2c1693d1e6ce2ebeca0b65765f81bddde65c5b0a",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed",
+        "case": "recorded_reopen",
+        "seed": 5340304686692337680,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "aae6955fffc2d6eae2f4ca1a2c1693d1e6ce2ebeca0b65765f81bddde65c5b0a",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed",
+        "case": "reject_before_close",
+        "seed": 1,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "2ee9d4690afde15faa62bdda44699b5026d173f1c40f472033872257a40fa15d",
+        "committed": [
+          13,
+          13
+        ],
+        "accepted_draft_count": 1,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed",
+        "case": "reject_before_close",
+        "seed": 1234,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "2ee9d4690afde15faa62bdda44699b5026d173f1c40f472033872257a40fa15d",
+        "committed": [
+          13,
+          13
+        ],
+        "accepted_draft_count": 1,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed",
+        "case": "reject_before_close",
+        "seed": 5340304686692337680,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "2ee9d4690afde15faa62bdda44699b5026d173f1c40f472033872257a40fa15d",
+        "committed": [
+          13,
+          13
+        ],
+        "accepted_draft_count": 1,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed",
+        "case": "normal_response_control",
+        "seed": 1,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          12092,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "0bbce9aa69fa8f0a865536227a6e0c55ffd85b3bc9283771c5fb1fc2b6f97d30",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed",
+        "case": "normal_response_control",
+        "seed": 1234,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          12092,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "0bbce9aa69fa8f0a865536227a6e0c55ffd85b3bc9283771c5fb1fc2b6f97d30",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed",
+        "case": "normal_response_control",
+        "seed": 5340304686692337680,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          12092,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "0bbce9aa69fa8f0a865536227a6e0c55ffd85b3bc9283771c5fb1fc2b6f97d30",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      }
+    ]
+  },
+  "fixed_traced": {
+    "sources": {
+      "vllm.v1.structured_output": {
+        "sha256": "d793127e62d88ac1df6c57595973ce766526f642e1ed59f3bd16b60ed3f537c5"
+      },
+      "vllm.v1.core.sched.scheduler": {
+        "sha256": "e2e59ccf902e3ab8ce2df3e6dc345a295d78bb06e37d408582ad95f8e5914ac7"
+      },
+      "vllm_ascend.worker.v2.spec_decode.rejection_sampler_utils": {
+        "sha256": "83cfdc9672f558820c3fcf18bdf68c1a89279b14b20de5104b636ed207458bfd"
+      },
+      "vllm_ascend.ops.triton.v2.spec_decode.resample": {
+        "sha256": "0685e0d55bb21105180b95747fde8ace8a3136af478e8bc4add6f9d626e4c8b3"
+      }
+    },
+    "results": [
+      {
+        "variant": "fixed-traced",
+        "case": "recorded_reopen",
+        "seed": 1,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "aae6955fffc2d6eae2f4ca1a2c1693d1e6ce2ebeca0b65765f81bddde65c5b0a",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed-traced",
+        "case": "recorded_reopen",
+        "seed": 1234,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "aae6955fffc2d6eae2f4ca1a2c1693d1e6ce2ebeca0b65765f81bddde65c5b0a",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed-traced",
+        "case": "recorded_reopen",
+        "seed": 5340304686692337680,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "aae6955fffc2d6eae2f4ca1a2c1693d1e6ce2ebeca0b65765f81bddde65c5b0a",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed-traced",
+        "case": "reject_before_close",
+        "seed": 1,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "2ee9d4690afde15faa62bdda44699b5026d173f1c40f472033872257a40fa15d",
+        "committed": [
+          13,
+          13
+        ],
+        "accepted_draft_count": 1,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed-traced",
+        "case": "reject_before_close",
+        "seed": 1234,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "2ee9d4690afde15faa62bdda44699b5026d173f1c40f472033872257a40fa15d",
+        "committed": [
+          13,
+          13
+        ],
+        "accepted_draft_count": 1,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed-traced",
+        "case": "reject_before_close",
+        "seed": 5340304686692337680,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          39964,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "2ee9d4690afde15faa62bdda44699b5026d173f1c40f472033872257a40fa15d",
+        "committed": [
+          13,
+          13
+        ],
+        "accepted_draft_count": 1,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed-traced",
+        "case": "normal_response_control",
+        "seed": 1,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          12092,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "0bbce9aa69fa8f0a865536227a6e0c55ffd85b3bc9283771c5fb1fc2b6f97d30",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed-traced",
+        "case": "normal_response_control",
+        "seed": 1234,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          12092,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "0bbce9aa69fa8f0a865536227a6e0c55ffd85b3bc9283771c5fb1fc2b6f97d30",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      },
+      {
+        "variant": "fixed-traced",
+        "case": "normal_response_control",
+        "seed": 5340304686692337680,
+        "raw": [
+          13,
+          163588,
+          39964,
+          163589,
+          163587,
+          12092,
+          163589
+        ],
+        "prior_tail": [
+          3013,
+          1579,
+          10994
+        ],
+        "boundary": 4,
+        "prefixes": [
+          2,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "scheduled": [
+          13,
+          163588,
+          39964,
+          163589,
+          -1,
+          -1,
+          -1
+        ],
+        "invalid": 3,
+        "open_mask_row4": 0,
+        "masked_open_logit": "-inf",
+        "pre_mask_input_sha256": "0bbce9aa69fa8f0a865536227a6e0c55ffd85b3bc9283771c5fb1fc2b6f97d30",
+        "committed": [
+          13,
+          163588,
+          39964,
+          163589,
+          13071
+        ],
+        "accepted_draft_count": 4,
+        "fsm_accepts": true
+      }
+    ]
+  }
+}

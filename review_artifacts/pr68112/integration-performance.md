@@ -102,3 +102,7 @@ VLLM_TARGET_DEVICE=cpu PYTHONPATH=. HF_HUB_OFFLINE=1 \
 ```
 
 The benchmark refuses to overwrite an existing result file. Environment versions and timing noise can change absolute measurements; compare all arms on the same machine. AI assistance was used to integrate the code, run these checks and prepare this report.
+
+## Subsequent generation validation
+
+The separate [2026-11-18 generation report](generation-regression.md) adds fixed-draft and multi-turn CPU checks, native deterministic before/after results, 100 normal HTTP replays and 10 multi-turn HTTP requests. Accelerator evidence uses a downstream API adapter and direct decode; full PD routing was not validated. This does not change the scope of the CPU timings above.

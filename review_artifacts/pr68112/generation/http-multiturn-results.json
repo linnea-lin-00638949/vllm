@@ -1,0 +1,112 @@
+[
+  {
+    "index": 0,
+    "prior_turns": 1,
+    "http": 200,
+    "text": ". <|close|> think <|sep|> {}",
+    "content": {},
+    "finish_reason": "stop",
+    "prompt_tokens": 247,
+    "completion_tokens": 6,
+    "kv_transfer_params": null
+  },
+  {
+    "index": 1,
+    "prior_turns": 1,
+    "http": 200,
+    "text": ". No markdown. <|close|> think <|sep|> { }",
+    "content": {},
+    "finish_reason": "stop",
+    "prompt_tokens": 247,
+    "completion_tokens": 10,
+    "kv_transfer_params": null
+  },
+  {
+    "index": 2,
+    "prior_turns": 1,
+    "http": 200,
+    "text": ". No markdown. <|close|> think <|sep|> { }",
+    "content": {},
+    "finish_reason": "stop",
+    "prompt_tokens": 247,
+    "completion_tokens": 10,
+    "kv_transfer_params": null
+  },
+  {
+    "index": 3,
+    "prior_turns": 1,
+    "http": 200,
+    "text": ". No markdown. <|close|> think <|sep|> { }",
+    "content": {},
+    "finish_reason": "stop",
+    "prompt_tokens": 247,
+    "completion_tokens": 10,
+    "kv_transfer_params": null
+  },
+  {
+    "index": 4,
+    "prior_turns": 1,
+    "http": 200,
+    "text": ". <|close|> think <|sep|> {}",
+    "content": {},
+    "finish_reason": "stop",
+    "prompt_tokens": 247,
+    "completion_tokens": 6,
+    "kv_transfer_params": null
+  },
+  {
+    "index": 5,
+    "prior_turns": 4,
+    "http": 200,
+    "text": ". <|close|> think <|sep|> {}",
+    "content": {},
+    "finish_reason": "stop",
+    "prompt_tokens": 382,
+    "completion_tokens": 6,
+    "kv_transfer_params": null
+  },
+  {
+    "index": 6,
+    "prior_turns": 4,
+    "http": 200,
+    "text": ". <|close|> think <|sep|> {}",
+    "content": {},
+    "finish_reason": "stop",
+    "prompt_tokens": 382,
+    "completion_tokens": 7,
+    "kv_transfer_params": null
+  },
+  {
+    "index": 7,
+    "prior_turns": 4,
+    "http": 200,
+    "text": ". <|close|> think <|sep|> {}",
+    "content": {},
+    "finish_reason": "stop",
+    "prompt_tokens": 382,
+    "completion_tokens": 6,
+    "kv_transfer_params": null
+  },
+  {
+    "index": 8,
+    "prior_turns": 4,
+    "http": 200,
+    "text": ". <|close|> think <|sep|> {}",
+    "content": {},
+    "finish_reason": "stop",
+    "prompt_tokens": 382,
+    "completion_tokens": 6,
+    "kv_transfer_params": null
+  },
+  {
+    "index": 9,
+    "prior_turns": 4,
+    "http": 200,
+    "text": ". <|close|> think <|sep|> {}",
+    "content": {},
+    "finish_reason": "stop",
+    "prompt_tokens": 382,
+    "completion_tokens": 6,
+    "kv_transfer_params": null
+  }
+]

@@ -1,0 +1,115 @@
+{
+  "environment": {
+    "python": "3.12.14 (main, Sep  1 2026, 14:09:38) [Clang 22.1.3 ]",
+    "platform": "macOS-15.5-arm64-arm-64bit",
+    "torch": "2.14.0",
+    "xgrammar": "0.2.7",
+    "model": "gpt2"
+  },
+  "scope": "fixed draft, no HTTP or scheduler/KV execution",
+  "logits_source": "synthetic",
+  "proposal": "point-mass q, not draft-model logits",
+  "cases": [
+    {
+      "close_tail": null,
+      "draft": [
+        13,
+        27,
+        91,
+        19836,
+        91,
+        29,
+        14925,
+        27,
+        91,
+        325,
+        79,
+        91,
+        29,
+        27,
+        91,
+        9654,
+        91,
+        29,
+        14925,
+        27,
+        91,
+        325,
+        79,
+        91,
+        29
+      ],
+      "short_boundary": 13,
+      "full_boundary": 26,
+      "boundary_bug": true
+    },
+    {
+      "close_tail": 1,
+      "draft": [
+        29,
+        27,
+        91,
+        9654,
+        91,
+        29,
+        14925,
+        27,
+        91,
+        325,
+        79,
+        91,
+        29
+      ],
+      "short_boundary": 1,
+      "full_boundary": 14,
+      "boundary_bug": true
+    },
+    {
+      "close_tail": 2,
+      "draft": [
+        91,
+        29,
+        27,
+        91,
+        9654,
+        91,
+        29,
+        14925,
+        27,
+        91,
+        325,
+        79,
+        91,
+        29
+      ],
+      "short_boundary": 2,
+      "full_boundary": 15,
+      "boundary_bug": true
+    },
+    {
+      "close_tail": 3,
+      "draft": [
+        79,
+        91,
+        29,
+        27,
+        91,
+        9654,
+        91,
+        29,
+        14925,
+        27,
+        91,
+        325,
+        79,
+        91,
+        29
+      ],
+      "short_boundary": 3,
+      "full_boundary": 16,
+      "boundary_bug": true
+    }
+  ],
+  "classification": "CPU_BOUNDARY_ONLY_BUG",
+  "exit_code": 0
+}

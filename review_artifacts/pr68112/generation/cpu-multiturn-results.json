@@ -1,0 +1,386 @@
+[
+  {
+    "turns": 0,
+    "split": 0,
+    "initial": null,
+    "committed": false,
+    "boundary": 3,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 0,
+    "split": 0,
+    "initial": null,
+    "committed": true,
+    "boundary": 3,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 0,
+    "split": 0,
+    "initial": false,
+    "committed": false,
+    "boundary": 3,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 0,
+    "split": 0,
+    "initial": false,
+    "committed": true,
+    "boundary": 3,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 0,
+    "split": 1,
+    "initial": null,
+    "committed": false,
+    "boundary": 2,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 0,
+    "split": 1,
+    "initial": null,
+    "committed": true,
+    "boundary": 2,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 0,
+    "split": 1,
+    "initial": false,
+    "committed": false,
+    "boundary": 2,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 0,
+    "split": 1,
+    "initial": false,
+    "committed": true,
+    "boundary": 2,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 0,
+    "split": 2,
+    "initial": null,
+    "committed": false,
+    "boundary": 1,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 0,
+    "split": 2,
+    "initial": null,
+    "committed": true,
+    "boundary": 1,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 0,
+    "split": 2,
+    "initial": false,
+    "committed": false,
+    "boundary": 1,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 0,
+    "split": 2,
+    "initial": false,
+    "committed": true,
+    "boundary": 1,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 1,
+    "split": 0,
+    "initial": null,
+    "committed": false,
+    "boundary": 3,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 1,
+    "split": 0,
+    "initial": null,
+    "committed": true,
+    "boundary": 3,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 1,
+    "split": 0,
+    "initial": false,
+    "committed": false,
+    "boundary": 3,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 1,
+    "split": 0,
+    "initial": false,
+    "committed": true,
+    "boundary": 3,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 1,
+    "split": 1,
+    "initial": null,
+    "committed": false,
+    "boundary": 2,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 1,
+    "split": 1,
+    "initial": null,
+    "committed": true,
+    "boundary": 2,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 1,
+    "split": 1,
+    "initial": false,
+    "committed": false,
+    "boundary": 2,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 1,
+    "split": 1,
+    "initial": false,
+    "committed": true,
+    "boundary": 2,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 1,
+    "split": 2,
+    "initial": null,
+    "committed": false,
+    "boundary": 1,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 1,
+    "split": 2,
+    "initial": null,
+    "committed": true,
+    "boundary": 1,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 1,
+    "split": 2,
+    "initial": false,
+    "committed": false,
+    "boundary": 1,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 1,
+    "split": 2,
+    "initial": false,
+    "committed": true,
+    "boundary": 1,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 4,
+    "split": 0,
+    "initial": null,
+    "committed": false,
+    "boundary": 3,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 4,
+    "split": 0,
+    "initial": null,
+    "committed": true,
+    "boundary": 3,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 4,
+    "split": 0,
+    "initial": false,
+    "committed": false,
+    "boundary": 3,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 4,
+    "split": 0,
+    "initial": false,
+    "committed": true,
+    "boundary": 3,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 4,
+    "split": 1,
+    "initial": null,
+    "committed": false,
+    "boundary": 2,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 4,
+    "split": 1,
+    "initial": null,
+    "committed": true,
+    "boundary": 2,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 4,
+    "split": 1,
+    "initial": false,
+    "committed": false,
+    "boundary": 2,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 4,
+    "split": 1,
+    "initial": false,
+    "committed": true,
+    "boundary": 2,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 4,
+    "split": 2,
+    "initial": null,
+    "committed": false,
+    "boundary": 1,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 4,
+    "split": 2,
+    "initial": null,
+    "committed": true,
+    "boundary": 1,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 4,
+    "split": 2,
+    "initial": false,
+    "committed": false,
+    "boundary": 1,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 4,
+    "split": 2,
+    "initial": false,
+    "committed": true,
+    "boundary": 1,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 32,
+    "split": 0,
+    "initial": null,
+    "committed": false,
+    "boundary": 3,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 32,
+    "split": 0,
+    "initial": null,
+    "committed": true,
+    "boundary": 3,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 32,
+    "split": 0,
+    "initial": false,
+    "committed": false,
+    "boundary": 3,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 32,
+    "split": 0,
+    "initial": false,
+    "committed": true,
+    "boundary": 3,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 32,
+    "split": 1,
+    "initial": null,
+    "committed": false,
+    "boundary": 2,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 32,
+    "split": 1,
+    "initial": null,
+    "committed": true,
+    "boundary": 2,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 32,
+    "split": 1,
+    "initial": false,
+    "committed": false,
+    "boundary": 2,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 32,
+    "split": 1,
+    "initial": false,
+    "committed": true,
+    "boundary": 2,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 32,
+    "split": 2,
+    "initial": null,
+    "committed": false,
+    "boundary": 1,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 32,
+    "split": 2,
+    "initial": null,
+    "committed": true,
+    "boundary": 1,
+    "grammar_and_json_commit": false
+  },
+  {
+    "turns": 32,
+    "split": 2,
+    "initial": false,
+    "committed": false,
+    "boundary": 1,
+    "grammar_and_json_commit": true
+  },
+  {
+    "turns": 32,
+    "split": 2,
+    "initial": false,
+    "committed": true,
+    "boundary": 1,
+    "grammar_and_json_commit": false
+  }
+]
