@@ -1,0 +1,19 @@
+tests/v1/structured_output/test_structured_output_manager.py
+  s_20aae6ea349467::t_e3dd6777f983d7 259,295
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e49f7e20fb2ef714c159c495bc187160e25dd249",
+  "prompts": {},
+  "sessions": {
+    "s_20aae6ea349467": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1e306-4e07-7ae1-b741-33e5e12fb370",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "linnea-lin-00638949 <247557940+linnea-lin-00638949@users.noreply.github.com>"
+    }
+  }
+}
